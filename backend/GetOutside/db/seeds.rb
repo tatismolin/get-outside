@@ -26,3 +26,5 @@ swimming = Activity.create(
     photo: "https://www.brilliantbusinessthings.com/wp-content/uploads/2015/07/drowning-not-waving.jpg",
     temperature: 90
 )
+
+user = User.create(name: "Main user")
