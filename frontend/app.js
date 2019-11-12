@@ -1,4 +1,5 @@
 const weatherSection = document.querySelector(".weather")
+const asideSection = document.querySelector(".aside")
 
 fetch("http://api.openweathermap.org/data/2.5/weather?q=Denver,us&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial")
     .then(response => response.json())
@@ -24,7 +25,8 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Denver,us&APPID=36439a70
         a.innerText = "Select an activity"
         a.href = `http://localhost:3001/activityShow.html?temp=${Math.ceil(weatherData.main.temp)}` 
         
-        weatherSection.append(h2, img, temph3, desch3, a)
+        weatherSection.append(h2, img, temph3, desch3)
+        asideSection.appendChild(a)
     })
 
 
