@@ -1,9 +1,6 @@
-body {
+body { 
     font-family: 'Montserrat', sans-serif;
     color:  rgb(15, 19, 26);
-}
-
-body { 
     background: url(https://resi.ze-robot.com/dl/sa/san-juan-mountains-colorado-photo-credit-to-dan-carreno-1600%C3%971200.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;

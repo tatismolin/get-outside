@@ -5,7 +5,7 @@ let descriptionInput = document.querySelector('#description')
 let photoInput = document.querySelector('#photo')
 let temperatureInput = document.querySelector('#temperature')
 let edit = document.querySelector('#edit')
-console.log(currentTemp)
+
 fetch(`http://localhost:3000/activities/${id}`)
     .then(response => response.json())
     .then(activity => {
