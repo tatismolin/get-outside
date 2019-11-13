@@ -1,5 +1,6 @@
 const weatherSection = document.querySelector(".weather")
-const asideSection = document.querySelector(".aside")
+const planList = document.querySelector(".planList")
+const asideButton = document.querySelector(".asideButton")
 let currentTemp = 0
 
 fetch("http://api.openweathermap.org/data/2.5/weather?q=Honolulu,us&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial")
@@ -10,7 +11,6 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Honolulu,us&APPID=36439a
         const desch3 = document.createElement("h3")
         const a = document.createElement("a")
         const img = document.createElement("img")
-        // const planDiv = document.createElement("div")
 
         if (weatherData.weather[0].main === "Clear" || weatherData.weather[0].main === "Sunny") {
             img.src = "https://ssl.gstatic.com/onebox/weather/64/sunny.png";
@@ -26,21 +26,29 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Honolulu,us&APPID=36439a
         temph3.innerText = `${Math.ceil(weatherData.main.temp)}\u2109`
         currentTemp = Math.ceil(weatherData.main.temp)
         desch3.innerText = weatherData.weather[0].main
-        // planDiv
         a.innerText = "Select an activity"
         a.href = `http://localhost:3001/activityShow.html?temp=${Math.ceil(weatherData.main.temp)}` 
         
         weatherSection.append(h2, img, temph3, desch3)
-        asideSection.appendChild(a)
+        asideButton.appendChild(a)
     })
 
 fetch("http://localhost:3000/activity_plans")
     .then(response => response.json())
     .then(activity_plans => activity_plans.map(activity_plan => {
-        let div = document.createElement("div")
+        const div = document.createElement("div")
+        const p = document.createElement("p")
+        const deleteButton = document.createElement("button")
 
-        div.innerText = activity_plan.activity.description
-
-        asideSection.appendChild(div)
+        p.innerText = activity_plan.activity.description
+        deleteButton.innerText = "DELETE"
+        deleteButton.addEventListener("click", function(event){
+            event.target.parentNode.remove()
+            fetch(`http://localhost:3000/activity_plans/${activity_plan.id}`, {
+                method: "DELETE"
+            })
+        })
+        div.append(p, deleteButton)
+        planList.appendChild(div)
     }))
 
