@@ -1,5 +1,5 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif, rgb(41, 40, 40);
 }
 
 body { 
@@ -34,12 +34,21 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    margin-top: 150px;
+    opacity: 0.5;
+    text-align: center;
 }
 
 .weather {
-    background-color: lightblue;
+    height: 250px;
+    width: 20%;
+    background-color: rgb(113, 142, 184);
+    border-radius: 25px;
 }
 
-aside {
-    background-color: blue;
+.aside {
+    height: 250px;
+    width: 20%;
+    background-color: rgb(113, 142, 184);
+    border-radius: 25px;
 }
