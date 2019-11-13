@@ -1,7 +1,7 @@
 const weatherSection = document.querySelector(".weather")
 const asideSection = document.querySelector(".aside")
 
-fetch("http://api.openweathermap.org/data/2.5/weather?q=Denver,us&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial")
+fetch("http://api.openweathermap.org/data/2.5/weather?q=Honolulu,us&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial")
     .then(response => response.json())
     .then(weatherData => {
         const h2 = document.createElement("h2")
