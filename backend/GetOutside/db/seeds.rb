@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Activity.destroy_all
 User.destroy_all
+Plan.destroy_all
+ActivityPlan.destroy_all
 
 
 ice_skate = Activity.create(
@@ -101,4 +103,8 @@ road_bike = Activity.create(
     temperature: 65
 )
 
-user = User.create(name: "Main user")
+user1 = User.create(name: "Main user")
+
+plan1 = Plan.create(user: user1)
+
+ActivityPlan.create(plan: plan1, activity: mtb)
