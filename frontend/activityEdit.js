@@ -5,11 +5,10 @@ let descriptionInput = document.querySelector('#description')
 let photoInput = document.querySelector('#photo')
 let temperatureInput = document.querySelector('#temperature')
 let edit = document.querySelector('#edit')
-
+console.log(currentTemp)
 fetch(`http://localhost:3000/activities/${id}`)
     .then(response => response.json())
     .then(activity => {
-        console.log(activity)
         nameInput.value = activity.name 
         descriptionInput.value = activity.description 
         photoInput.value = activity.photo 
@@ -28,6 +27,6 @@ fetch(`http://localhost:3000/activities/${id}`)
                 temperature: temperatureInput.value
             })
         })
-        .then(response => window.location = "http://localhost:3001/")
+        .then(response => window.location = `http://localhost:3001/activityShow.html?temp=${currentTemp}`)
     })
 })

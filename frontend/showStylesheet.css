@@ -1,0 +1,37 @@
+body {
+    background-color: #dedede;
+}
+
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    margin: auto;
+    border: 1px dashed gray;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.activityCards {
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+
+    width: 200px;
+    margin: 0;
+    border: 1px solid gray;
+    padding: 8px;
+    box-sizing: border-box;
+    /* flex-shrink: 0; */
+    background-color: #fff;
+}
+
+.activityCards img {
+    width: 100%;
+}
+
+.activityCards h1 {
+    text-align: center;
+    padding: 8px 4px;
+}
+
