@@ -9,7 +9,9 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Honolulu,us&APPID=36439a
         const temph3 = document.createElement("h3")
         const desch3 = document.createElement("h3")
         const a = document.createElement("a")
-        const img = document.createElement("img");
+        const img = document.createElement("img")
+        // const planDiv = document.createElement("div")
+
         if (weatherData.weather[0].main === "Clear" || weatherData.weather[0].main === "Sunny") {
             img.src = "https://ssl.gstatic.com/onebox/weather/64/sunny.png";
         } else if (weatherData.weather[0].main === "Rain") {
@@ -24,6 +26,7 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Honolulu,us&APPID=36439a
         temph3.innerText = `${Math.ceil(weatherData.main.temp)}\u2109`
         currentTemp = Math.ceil(weatherData.main.temp)
         desch3.innerText = weatherData.weather[0].main
+        // planDiv
         a.innerText = "Select an activity"
         a.href = `http://localhost:3001/activityShow.html?temp=${Math.ceil(weatherData.main.temp)}` 
         
@@ -31,6 +34,6 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Honolulu,us&APPID=36439a
         asideSection.appendChild(a)
     })
 
-
+fetch("")
 
 

@@ -1,4 +1,5 @@
 const galleryDiv = document.querySelector("#gallery")
+const activitiesDiv = document.querySelector(".activityCards")
 const params = new URLSearchParams(window.location.search)
 const temp = params.get("temp")
 
@@ -13,12 +14,9 @@ fetch(`http://localhost:3000/activities/`)
 
         if (activity.temperature >= +temp-20 && activity.temperature <= +temp+20) {
             h1.innerText = activity.name
-
             img.setAttribute("src", activity.photo)
-            editButton.innerText = "EDIT"
-            // edit.setAttribute('style', "text-decoration: none;")
-            // edit.href = `activityEdit.html?id=${activity.id}`
 
+            editButton.innerText = "EDIT"
             editButton.addEventListener("click", function(event){
                 event.preventDefault()
                 window.location.href = `activityEdit.html?id=${activity.id}`
@@ -31,7 +29,8 @@ fetch(`http://localhost:3000/activities/`)
                     method: "DELETE"
                 })
             })
+            activityDiv.setAttribute("class", "activity")
             activityDiv.append(img, h1, editButton, deleteButton)
-            galleryDiv.appendChild(activityDiv)
         }  
+        activitiesDiv.appendChild(activityDiv)
     }))

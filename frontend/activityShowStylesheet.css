@@ -1,0 +1,36 @@
+body {
+    background-color: #dedede;
+}
+
+.activityCards {
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    margin: auto;
+    border: 1px dashed gray;
+    justify-content: space-around;
+    
+}
+
+.activity {
+    display: flex;
+    /* flex-wrap: wrap; */
+
+    width: 200px;
+    margin: 0;
+    border: 1px solid gray;
+    padding: 8px;
+    box-sizing: border-box;
+    /* flex-shrink: 0; */
+    background-color: #fff;
+}
+
+.activity img {
+    width: 100%;
+}
+
+.activity h1 {
+    text-align: center;
+    padding: 8px 4px;
+}
+

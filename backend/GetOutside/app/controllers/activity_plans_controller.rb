@@ -1,8 +1,13 @@
 class ActivityPlansController < ApplicationController
 
     def index
-        activityPlans = activityPlan.all 
-        render json: activityPlans
+        activityPlans = ActivityPlan.all 
+        render json: activityPlans, include: [:activity]
     end
 
+    def show
+        activityPlan = ActivityPlan.Find(params[:id])
+        render json: activityPlan
+    end
+    
 end
