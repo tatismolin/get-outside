@@ -34,6 +34,13 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Honolulu,us&APPID=36439a
         asideSection.appendChild(a)
     })
 
-fetch("")
+fetch("http://localhost:3000/activity_plans")
+    .then(response => response.json())
+    .then(activity_plans => activity_plans.map(activity_plan => {
+        let div = document.createElement("div")
 
+        div.innerText = activity_plan.activity.description
+
+        asideSection.appendChild(div)
+    }))
 

@@ -4,7 +4,7 @@ body {
 
 .activityCards {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: row wrap;
     width: 900px;
     margin: auto;
     border: 1px dashed gray;
@@ -13,11 +13,11 @@ body {
 }
 
 .activity {
-    display: flex;
-    /* flex-wrap: wrap; */
+    /* display: flex;
+    flex-direction: column; */
 
     width: 200px;
-    margin: 0;
+    margin-bottom: 10px;
     border: 1px solid gray;
     padding: 8px;
     box-sizing: border-box;
@@ -33,4 +33,3 @@ body {
     text-align: center;
     padding: 8px 4px;
 }
-
