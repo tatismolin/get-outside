@@ -8,23 +8,25 @@
     <title>Activities</title>
 </head>
 <body>
-    <div class="activityCards"></div>
-    <h3>Can't find the activity you want? Add your own!</h3>
+    <div class="activityCards">
     <form method='POST' action="http://localhost:3000/activities">
+        <h3>Can't find the activity you want? Add your own!</h3>
+
         <label>Name</label>
-        <input name='name'/>
+        <input type="text" name='name'/>
 
         <label>Description</label>
-        <input name='description'/>
+        <input type="text" name='description'/>
 
         <label>Photo</label>
-        <input name='photo'/>
+        <input type="text" name='photo'/>
 
         <label>Ideal Temperature</label>
-        <input name='temperature'/>
+        <input type="text" name='temperature'/>
         
         <input type='submit'/>
     </form>
+    </div>
     <script src="activityShow.js"></script>
 </body>
 </html>

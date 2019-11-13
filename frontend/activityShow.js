@@ -67,5 +67,5 @@ function createCard(activity){
     })
     activityDiv.setAttribute("class", "activity")
     activityDiv.append(img, h1, addButton, editButton, deleteButton)
-    activitiesDiv.appendChild(activityDiv)
+    activitiesDiv.prepend(activityDiv)
 }
