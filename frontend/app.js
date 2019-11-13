@@ -1,5 +1,6 @@
 const weatherSection = document.querySelector(".weather")
 const asideSection = document.querySelector(".aside")
+let currentTemp = 0
 
 fetch("http://api.openweathermap.org/data/2.5/weather?q=Honolulu,us&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial")
     .then(response => response.json())
@@ -21,6 +22,7 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Honolulu,us&APPID=36439a
 
         h2.innerText = weatherData.name
         temph3.innerText = `${Math.ceil(weatherData.main.temp)}\u2109`
+        currentTemp = Math.ceil(weatherData.main.temp)
         desch3.innerText = weatherData.weather[0].main
         a.innerText = "Select an activity"
         a.href = `http://localhost:3001/activityShow.html?temp=${Math.ceil(weatherData.main.temp)}` 
