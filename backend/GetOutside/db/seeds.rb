@@ -5,10 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Activity.destroy_all
-User.destroy_all
-Plan.destroy_all
 ActivityPlan.destroy_all
+Plan.destroy_all
+User.destroy_all
+Activity.destroy_all
 
 
 ice_skate = Activity.create(
@@ -36,7 +36,7 @@ hike = Activity.create(
     name: "Hike", 
     description: "Go for a hike", 
     photo: "https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/topic_centers/2019-8/couple-hiking-mountain-climbing-1296x728-header.jpg?w=1155",
-    temperature: 75
+    temperature: 55
 )
 
 swim = Activity.create(

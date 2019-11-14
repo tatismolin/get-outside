@@ -1,5 +1,7 @@
 let params = new URLSearchParams(window.location.search)
 let id = params.get("id")
+let temp = params.get("temp")
+
 let nameInput = document.querySelector('#name')
 let descriptionInput = document.querySelector('#description')
 let photoInput = document.querySelector('#photo')
@@ -27,6 +29,6 @@ fetch(`http://localhost:3000/activities/${id}`)
                 temperature: temperatureInput.value
             })
         })
-        .then(response => window.location = `http://localhost:3001/activityShow.html?temp=${currentTemp}`)
+        .then(response => window.location = `http://localhost:3001/activityShow.html?temp=${temp}`)
     })
 })

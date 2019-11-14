@@ -9,22 +9,22 @@
 </head>
 <body>
     <div class="activityCards">
-    <form method='POST' action="http://localhost:3000/activities">
+    <form id="addForm">
         <h3>Can't find the activity you want? Add your own!</h3>
 
         <label>Name</label>
-        <input type="text" name='name'/>
+        <input type="text" name="name" id="name"/>
 
         <label>Description</label>
-        <input type="text" name='description'/>
+        <input type="text" name="description" id="description"/>
 
         <label>Photo</label>
-        <input type="text" name='photo'/>
+        <input type="text" name="photo" id="photo"/>
 
         <label>Ideal Temperature</label>
-        <input type="text" name='temperature'/>
+        <input type="text" name="temperature" id="temperature"/>
         
-        <input type='submit'/>
+        <input type='submit' id="add"/>
     </form>
     </div>
     <script src="activityShow.js"></script>

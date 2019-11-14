@@ -55,7 +55,7 @@ function createCard(activity){
 
     editButton.innerText = "EDIT"
     editButton.addEventListener("click", function(event){
-        window.location.href = `activityEdit.html?id=${activity.id}`
+        window.location.href = `activityEdit.html?id=${activity.id}&temp=${temp}`
     })
 
     deleteButton.innerText = "DELETE"
@@ -69,3 +69,27 @@ function createCard(activity){
     activityDiv.append(img, h1, addButton, editButton, deleteButton)
     activitiesDiv.prepend(activityDiv)
 }
+
+
+let nameInput = document.querySelector('#name')
+let descriptionInput = document.querySelector('#description')
+let photoInput = document.querySelector('#photo')
+let temperatureInput = document.querySelector('#temperature')
+let add = document.querySelector('#add')
+
+add.addEventListener("click", function(event){
+    event.preventDefault()
+    fetch(`http://localhost:3000/activities/`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"   
+        },
+        body: JSON.stringify({
+            name: nameInput.value,
+            description: descriptionInput.value,
+            photo: photoInput.value,
+            temperature: temperatureInput.value
+        })
+    })
+    .then(response => window.location = `http://localhost:3001/activityShow.html?temp=${temp}`)
+})

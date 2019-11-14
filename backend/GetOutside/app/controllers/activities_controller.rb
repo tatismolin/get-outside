@@ -12,7 +12,6 @@ class ActivitiesController < ApplicationController
 
     def create
         activity = Activity.create(allowed_params)
-        redirect_to "http://localhost:3001/"
     end
 
     def update

@@ -3,7 +3,7 @@ const planList = document.querySelector(".planList")
 const asideButton = document.querySelector(".asideButton")
 let currentTemp = 0
 
-fetch("http://api.openweathermap.org/data/2.5/weather?q=Denver,us&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial")
+fetch("http://api.openweathermap.org/data/2.5/weather?q=Honolulu,us&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial")
     .then(response => response.json())
     .then(weatherData => {
         const h2 = document.createElement("h2")
@@ -23,11 +23,11 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Denver,us&APPID=36439a70
         }
 
         h2.innerText = weatherData.name
-        temph3.innerText = `${Math.ceil(weatherData.main.temp)}\u2109`
         currentTemp = Math.ceil(weatherData.main.temp)
+        temph3.innerText = `${currentTemp}\u2109`
         desch3.innerText = weatherData.weather[0].main
         a.innerText = "Select an activity"
-        a.href = `http://localhost:3001/activityShow.html?temp=${Math.ceil(weatherData.main.temp)}` 
+        a.href = `http://localhost:3001/activityShow.html?temp=${currentTemp}` 
         
         weatherSection.append(h2, img, temph3, desch3)
         asideButton.appendChild(a)
