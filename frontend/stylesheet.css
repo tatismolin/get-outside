@@ -32,7 +32,7 @@ header {
     text-align: center;
     justify-content: space-evenly;
     margin-top: 200px;
-    opacity: 0.6;
+    opacity: 0.8;
 }
 
 .weather {
@@ -73,4 +73,16 @@ a {
     border-radius: 10px;
     font-weight: bold;
     color: rgb(5, 6, 8);
+}
+
+form {
+    color: rgb(26, 15, 17)
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    opacity: 0.8;
+    border-radius: 10px;
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
 }
