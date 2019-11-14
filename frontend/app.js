@@ -12,6 +12,13 @@ const img = document.createElement("img")
 fetch("http://api.openweathermap.org/data/2.5/weather?q=Denver,us&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial")
     .then(response => response.json())
     .then(weatherData => {
+        const h2 = document.createElement("h2")
+        const temph3 = document.createElement("h3")
+        const desch3 = document.createElement("h3")
+        const a = document.createElement("a")
+        const img = document.createElement("img")
+        img.setAttribute("class", "image")
+
 
         if (weatherData.weather[0].main === "Clear" || weatherData.weather[0].main === "Sunny") {
             img.src = "https://ssl.gstatic.com/onebox/weather/64/sunny.png";
