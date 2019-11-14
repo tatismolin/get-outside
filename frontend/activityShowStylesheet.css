@@ -22,7 +22,6 @@ header {
     margin: auto;
     justify-content: space-around;
     opacity: 0.8;
-
 }
 
 .activity {
@@ -44,6 +43,7 @@ header {
 .activity h1 {
     text-align: center;
     padding: 8px 4px;
+    margin-bottom: 10px;
 }
 
 form {
@@ -67,7 +67,7 @@ input[type=text] {
     box-sizing: border-box;
   }
   
-  input[type=submit] {
+input[type=submit] {
     width: 100%;
     background-color: rgb(32, 61, 102);
     color: white;
