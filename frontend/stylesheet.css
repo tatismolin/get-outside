@@ -51,7 +51,7 @@ nav h1 {
     margin: 0;
 }
 
-#weatherLoc {
+#weatherLocation {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -60,13 +60,13 @@ nav h1 {
     height: 60px;
 }
 
-#weatherLoc input[type=text] {
+#weatherLocation input[type=text] {
     width: 170px;
     margin-left: 15px;
     margin-right: 15px;
 }
 
-#weatherLoc input[type=submit] {
+#weatherLocation input[type=submit] {
 	/* background: url("submit.png") no-repeat center center; */
 	width: 80px;
 	/* height: 0;
