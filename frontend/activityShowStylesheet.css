@@ -20,6 +20,8 @@ header {
     width: 900px;
     margin: auto;
     justify-content: space-around;
+    opacity: 0.8;
+
 }
 
 .activity {
@@ -31,7 +33,7 @@ header {
     padding: 8px;
     box-sizing: border-box;
     /* flex-shrink: 0; */
-    background-color: #fff;
+    background-color:#f2f2f2
 }
 
 .activity img {
@@ -52,7 +54,6 @@ form {
     background-color: #fff;
     display: block;
     text-align: left;
-
 }
 
 input[type=text] {
