@@ -45,20 +45,26 @@ fetch(URL)
 fetch("http://localhost:3000/activity_plans")
     .then(response => response.json())
     .then(activity_plans => activity_plans.map(activity_plan => {
-        const div = document.createElement("div")
-        const p = document.createElement("p")
+        const planDiv = document.createElement("div")
+        // const oList = document.createElement("ol")
+        const listItem = document.createElement("div")
         const deleteButton = document.createElement("button")
+        planDiv.setAttribute("id", "planDiv")
+        listItem.setAttribute("id", "listItem")
+        deleteButton.setAttribute("id", "delete")
 
-        p.innerText = activity_plan.activity.description
-        deleteButton.innerText = "DELETE"
+        listItem.innerText = activity_plan.activity.description
+        deleteButton.innerText = "X"
         deleteButton.addEventListener("click", function(event){
             event.target.parentNode.remove()
             fetch(`http://localhost:3000/activity_plans/${activity_plan.id}`, {
                 method: "DELETE"
             })
         })
-        div.append(p, deleteButton)
-        planList.appendChild(div)
+
+        // oList.appendChild(listItem)
+        planDiv.append( deleteButton, listItem)
+        planList.appendChild(planDiv)
     }))
 
 let locationInput = document.querySelector('#locationText')
