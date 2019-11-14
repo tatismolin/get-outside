@@ -21,14 +21,18 @@
         <div id="gradient"></div>
     </header>
 
-    <form id="weatherLocation">
-            <label>What is your location?</label>
-            <input type="text" id="location"/>
-            <input type='submit' id="submit"/>
-    </form>
-
+ 
     <div class="container">
-        <section class="weather"></section>
+        <div class="weatherBoxes">
+            <section class="weather"></section>
+            <section class="weatherForm">
+                <form id="weatherLocation">
+                    <label>What is your location?</label>
+                    <input type="text" id="locationText"/>
+                    <input type='submit' id="locationSubmit"/>
+                </form>
+            </section>
+        </div>
         <aside class="aside">
             <div class="planList"></div>
             <div class="asideButton"></div>
