@@ -19,7 +19,7 @@ header {
     display: flex;
     flex-flow: row wrap;
     width: 900px;
-    margin: auto;
+    /* margin-bottom: 5px; */
     justify-content: space-around;
     opacity: 0.8;
 }
