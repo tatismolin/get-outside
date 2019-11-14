@@ -67,6 +67,7 @@ function createCard(activity){
     deleteButton.innerText = "DELETE"
     deleteButton.addEventListener("click", function(event){
         event.target.parentNode.remove()
+        activityDiv.remove()
         fetch(`http://localhost:3000/activities/${activity.id}`, {
             method: "DELETE"
         })

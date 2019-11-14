@@ -69,16 +69,18 @@ weatherLocation.addEventListener("submit", function(event){
     localStorage.setItem("location", locationInput.value);
     event.preventDefault()
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${locationInput.value},us&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial`)
-    .then(response => response.json())
-    .then(weatherData => {
+        .then(response => response.json())
+        .then(weatherData => {
 
-        filterPictures(weatherData)
+            filterPictures(weatherData)
 
-        h2.innerText = weatherData.name
-        temph3.innerText = `${Math.ceil(weatherData.main.temp)}\u2109`
-        currentTemp = Math.ceil(weatherData.main.temp)
-        desch3.innerText = weatherData.weather[0].main
-        a.href = `http://localhost:3001/activityShow.html?temp=${Math.ceil(weatherData.main.temp)}` 
+            h2.innerText = weatherData.name
+            temph3.innerText = `${Math.ceil(weatherData.main.temp)}\u2109`
+            currentTemp = Math.ceil(weatherData.main.temp)
+            desch3.innerText = weatherData.weather[0].main
+            a.href = `http://localhost:3001/activityShow.html?temp=${Math.ceil(weatherData.main.temp)}` 
+
+            locationInput.value = ""
     })
 })
 
@@ -97,5 +99,4 @@ function filterPictures(weatherData){
         return img.src = "https://ssl.gstatic.com/onebox/weather/48/cloudy.png"
     }
 }
-
 
