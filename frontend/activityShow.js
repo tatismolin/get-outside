@@ -5,7 +5,7 @@ const temp = params.get("temp")
 const headerDiv = document.querySelector("header")
 
 const h1Title = document.createElement("h1")
-h1Title.innerText = `Activities you can do at ${temp}\u2109`
+// h1Title.innerText = `Activities you can do at ${temp}\u2109`
 headerDiv.appendChild(h1Title)
 
 fetch(`http://localhost:3000/activities/`)

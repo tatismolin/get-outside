@@ -11,6 +11,7 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Honolulu,us&APPID=36439a
         const desch3 = document.createElement("h3")
         const a = document.createElement("a")
         const img = document.createElement("img")
+        img.setAttribute("class", "image")
 
         if (weatherData.weather[0].main === "Clear" || weatherData.weather[0].main === "Sunny") {
             img.src = "https://ssl.gstatic.com/onebox/weather/64/sunny.png";

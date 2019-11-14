@@ -1,7 +1,8 @@
 body { 
     font-family: 'Montserrat', sans-serif;
     color:  rgb(15, 19, 26);
-    background: url(https://serving.photos.photobox.com/27381133d822c19b4199390d92eaf00e1a409d4ddeadf3cb76ab98ecc30adec415e39b56.jpg) no-repeat center center fixed; 
+    /* background: url(https://serving.photos.photobox.com/27381133d822c19b4199390d92eaf00e1a409d4ddeadf3cb76ab98ecc30adec415e39b56.jpg) no-repeat center center fixed;  */
+    background: url(https://resi.ze-robot.com/dl/sa/san-juan-mountains-colorado-photo-credit-to-dan-carreno-1600%C3%971200.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
