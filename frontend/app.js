@@ -8,17 +8,16 @@ const temph3 = document.createElement("h3")
 const desch3 = document.createElement("h3")
 const a = document.createElement("a")
 const img = document.createElement("img")
+const circleDiv = document.createElement("div")
+const circleContainer = document.createElement("div")
+circleDiv.setAttribute("class", "circle")
+circleContainer.setAttribute("class", "circleContainer")
+img.setAttribute("class", "image")
+
 
 fetch("http://api.openweathermap.org/data/2.5/weather?q=Denver,us&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial")
     .then(response => response.json())
     .then(weatherData => {
-        const h2 = document.createElement("h2")
-        const temph3 = document.createElement("h3")
-        const desch3 = document.createElement("h3")
-        const a = document.createElement("a")
-        const img = document.createElement("img")
-        img.setAttribute("class", "image")
-
 
         if (weatherData.weather[0].main === "Clear" || weatherData.weather[0].main === "Sunny") {
             img.src = "https://ssl.gstatic.com/onebox/weather/64/sunny.png";
@@ -41,7 +40,8 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Denver,us&APPID=36439a70
         a.innerText = "Select an activity"
         a.href = `http://localhost:3001/activityShow.html?temp=${currentTemp}` 
         
-        weatherSection.append(h2, img, temph3, desch3)
+        circleContainer.append(img, circleDiv)
+        weatherSection.append(h2, circleContainer, temph3, desch3)
         asideButton.appendChild(a)
     })
 
@@ -64,19 +64,19 @@ fetch("http://localhost:3000/activity_plans")
         planList.appendChild(div)
     }))
 
-let locationInput = document.querySelector('#location')
-let weatherLocation = document.querySelector('#weatherLocation')
+let locationInput = document.querySelector('#locationText')
+let weatherLocation = document.querySelector('#locationSubmit')
  
 
 weatherLocation.addEventListener("submit", function(event){
     event.preventDefault()
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${locationInput.value}&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial`)
-    .then(response => response.json())
-    .then(weatherData => {
-        h2.innerText = weatherData.name
-        temph3.innerText = `${Math.ceil(weatherData.main.temp)}\u2109`
-        currentTemp = Math.ceil(weatherData.main.temp)
-        desch3.innerText = weatherData.weather[0].main
-        a.href = `http://localhost:3001/activityShow.html?temp=${Math.ceil(weatherData.main.temp)}` 
-    })
+        .then(response => response.json())
+        .then(weatherData => {
+            h2.innerText = weatherData.name
+            temph3.innerText = `${Math.ceil(weatherData.main.temp)}\u2109`
+            currentTemp = Math.ceil(weatherData.main.temp)
+            desch3.innerText = weatherData.weather[0].main
+            a.href = `http://localhost:3001/activityShow.html?temp=${Math.ceil(weatherData.main.temp)}` 
+        })
 })

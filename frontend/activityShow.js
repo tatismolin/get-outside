@@ -40,8 +40,10 @@ function createCard(activity){
     const editButton = document.createElement('button')
     const deleteButton = document.createElement('button')
     const activityDiv = document.createElement("div")
+    const buttonDiv = document.createElement("div")
     h1.innerText = activity.name
     img.setAttribute("src", activity.photo)
+    buttonDiv.setAttribute("class", "buttonDiv")
 
     addButton.innerText = "ADD THIS TO YOUR PLAN"
     addButton.addEventListener("click", function(event){
@@ -71,7 +73,8 @@ function createCard(activity){
     })
     
     activityDiv.setAttribute("class", "activity")
-    activityDiv.append(img, h1, addButton, editButton, deleteButton)
+    buttonDiv.append(addButton, editButton, deleteButton)
+    activityDiv.append(img, h1, buttonDiv)
     activitiesDiv.prepend(activityDiv)
 }
 
