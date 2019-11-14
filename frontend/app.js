@@ -9,7 +9,7 @@ const desch3 = document.createElement("h3")
 const a = document.createElement("a")
 const img = document.createElement("img")
 
-fetch("http://api.openweathermap.org/data/2.5/weather?q=Denver,us&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial")
+fetch("http://api.openweathermap.org/data/2.5/weather?q=80206,us&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial")
     .then(response => response.json())
     .then(weatherData => {
         const h2 = document.createElement("h2")
@@ -20,19 +20,7 @@ fetch("http://api.openweathermap.org/data/2.5/weather?q=Denver,us&APPID=36439a70
         img.setAttribute("class", "image")
 
 
-        if (weatherData.weather[0].main === "Clear" || weatherData.weather[0].main === "Sunny") {
-            img.src = "https://ssl.gstatic.com/onebox/weather/64/sunny.png";
-        } else if (weatherData.weather[0].main === "Rain") {
-            img.src = "https://ssl.gstatic.com/onebox/weather/64/rain_light.png";
-        } else if (weatherData.weather[0].main === "Clouds") {
-            img.src = "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-        } else if (weatherData.weather[0].main === "Snow") {
-            img.src = "https://ssl.gstatic.com/onebox/weather/48/snow_light.png"
-        } else if (weatherData.weather[0].main === "Smoke") {
-            img.src = "https://ssl.gstatic.com/onebox/weather/64/fog.png"
-        } else if (weatherData.weather[0].main === "Mist") {
-            img.src = "https://ssl.gstatic.com/onebox/weather/48/cloudy.png"
-        }
+        filterPictures(weatherData)
         
         h2.innerText = weatherData.name
         currentTemp = Math.ceil(weatherData.main.temp)
@@ -70,9 +58,12 @@ let weatherLocation = document.querySelector('#weatherLocation')
 
 weatherLocation.addEventListener("submit", function(event){
     event.preventDefault()
-    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${locationInput.value}&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial`)
+    fetch(`http://api.openweathermap.org/data/2.5/weather?q=${locationInput.value},us&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial`)
     .then(response => response.json())
     .then(weatherData => {
+
+        filterPictures(weatherData)
+
         h2.innerText = weatherData.name
         temph3.innerText = `${Math.ceil(weatherData.main.temp)}\u2109`
         currentTemp = Math.ceil(weatherData.main.temp)
@@ -80,3 +71,19 @@ weatherLocation.addEventListener("submit", function(event){
         a.href = `http://localhost:3001/activityShow.html?temp=${Math.ceil(weatherData.main.temp)}` 
     })
 })
+
+function filterPictures(weatherData){
+    if (weatherData.weather[0].main === "Clear" || weatherData.weather[0].main === "Sunny") {
+        return img.src = "https://ssl.gstatic.com/onebox/weather/64/sunny.png";
+    } else if (weatherData.weather[0].main === "Rain") {
+        return img.src = "https://ssl.gstatic.com/onebox/weather/64/rain_light.png";
+    } else if (weatherData.weather[0].main === "Clouds") {
+        return img.src = "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+    } else if (weatherData.weather[0].main === "Snow") {
+        return img.src = "https://ssl.gstatic.com/onebox/weather/48/snow_light.png"
+    } else if (weatherData.weather[0].main === "Smoke") {
+        return img.src = "https://ssl.gstatic.com/onebox/weather/64/fog.png"
+    } else if (weatherData.weather[0].main === "Mist") {
+        return img.src = "https://ssl.gstatic.com/onebox/weather/48/cloudy.png"
+    }
+}
