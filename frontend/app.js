@@ -53,7 +53,7 @@ fetch("http://localhost:3000/activity_plans")
     }))
 
 let locationInput = document.querySelector('#locationText')
-let weatherLocation = document.querySelector('#locationSubmit')
+let weatherLocation = document.querySelector('#weatherLoc')
  
 
 weatherLocation.addEventListener("submit", function(event){

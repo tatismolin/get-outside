@@ -12,28 +12,25 @@
 <body>
     <header>
         <nav>
-            <h1>Get Outside!</h1>
-            <h3>no excuses</h3>
-            <button onclick="location.href='index.html';" id="home_button">
-                HOME
-            </button>
+            <h1>Get </h1>
+            <!-- <img src="/logo.png" id="logo"> -->
+            <a href="index.html"><img src="/logo.png" id="logo"/></a>
+            <h1>utside</h1>
         </nav>
-        <div id="gradient"></div>
     </header>
-
- 
     <div class="container">
         <div class="weatherBoxes">
             <section class="weather"></section>
             <section class="weatherForm">
-                <form id="weatherLocation">
-                    <label>What is your location?</label>
+                <form id="weatherLoc">
+                    <label id="locationLabel">City/Zip Code:</label>
                     <input type="text" id="locationText"/>
                     <input type='submit' id="locationSubmit"/>
                 </form>
             </section>
         </div>
         <aside class="aside">
+            <h2>Your plan for the day:</h2>
             <div class="planList"></div>
             <div class="asideButton"></div>
         </aside>
