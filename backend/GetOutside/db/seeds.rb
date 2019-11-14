@@ -5,10 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Activity.destroy_all
-User.destroy_all
-Plan.destroy_all
 ActivityPlan.destroy_all
+Activity.destroy_all
+Plan.destroy_all
+User.destroy_all
 
 
 ice_skate = Activity.create(

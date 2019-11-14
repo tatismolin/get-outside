@@ -2,6 +2,11 @@ const galleryDiv = document.querySelector("#gallery")
 const activitiesDiv = document.querySelector(".activityCards")
 const params = new URLSearchParams(window.location.search)
 const temp = params.get("temp")
+const headerDiv = document.querySelector("header")
+
+const h1Title = document.createElement("h1")
+h1Title.innerText = `Activities you can do at ${temp}\u2109`
+headerDiv.appendChild(h1Title)
 
 fetch(`http://localhost:3000/activities/`)
     .then(response => response.json())
@@ -39,7 +44,6 @@ function createCard(activity){
     img.setAttribute("src", activity.photo)
 
     addButton.innerText = "ADD THIS TO YOUR PLAN"
-
     addButton.addEventListener("click", function(event){
         fetch("http://localhost:3000/activity_plans", {
             method: "POST",
@@ -65,6 +69,7 @@ function createCard(activity){
             method: "DELETE"
         })
     })
+    
     activityDiv.setAttribute("class", "activity")
     activityDiv.append(img, h1, addButton, editButton, deleteButton)
     activitiesDiv.prepend(activityDiv)
