@@ -10,12 +10,21 @@ const a = document.createElement("a")
 const img = document.createElement("img")
 const circleDiv = document.createElement("div")
 const circleContainer = document.createElement("div")
+let URL = "http://api.openweathermap.org/data/2.5/weather?q=80206,us&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial"
+let newLocation = localStorage.getItem("location");
+
+if (newLocation) {
+    URL = `http://api.openweathermap.org/data/2.5/weather?q=${newLocation},us&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial`
+} else {
+    URL 
+}
+
 circleDiv.setAttribute("class", "circle")
 circleContainer.setAttribute("class", "circleContainer")
 img.setAttribute("class", "image")
 
 
-fetch("http://api.openweathermap.org/data/2.5/weather?q=80206,us&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial")
+fetch(URL)
     .then(response => response.json())
     .then(weatherData => {
 
@@ -53,10 +62,11 @@ fetch("http://localhost:3000/activity_plans")
     }))
 
 let locationInput = document.querySelector('#locationText')
-let weatherLocation = document.querySelector('#locationSubmit')
+let weatherLocation = document.querySelector('#weatherLocation')
  
 
 weatherLocation.addEventListener("submit", function(event){
+    localStorage.setItem("location", locationInput.value);
     event.preventDefault()
     fetch(`http://api.openweathermap.org/data/2.5/weather?q=${locationInput.value},us&APPID=36439a7025c58d3c92fc4bba9b81a802&units=imperial`)
     .then(response => response.json())
@@ -87,3 +97,5 @@ function filterPictures(weatherData){
         return img.src = "https://ssl.gstatic.com/onebox/weather/48/cloudy.png"
     }
 }
+
+
