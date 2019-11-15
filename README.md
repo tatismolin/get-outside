@@ -6,16 +6,18 @@
    ![background](/2.png)
    ![background](/3.png)
 
-   **Demo** https://youtu.be/XT8uwAh1Qh8
+   **Demo** 
+   - https://youtu.be/XT8uwAh1Qh8
    
    **Stack:** 
    - Ruby/Rails
    - JavaScript
    - HTML/CSS
     
-   **API** https://openweathermap.org/api
+   **API** 
+   - https://openweathermap.org/api
 
-   **Install Instructions: In order to play the game you will need to:**
+   **Install Instructions**
 
   1. Have current version of Ruby, Rails and Lite Server installed.
 
