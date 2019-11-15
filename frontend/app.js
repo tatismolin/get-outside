@@ -89,7 +89,7 @@ weatherLocation.addEventListener("submit", function(event){
 })
 
 function filterPictures(weatherData){
-    if (weatherData.weather[0].main === "Clear" || weatherData.weather[0].main === "Sunny") {
+    if (weatherData.weather[0].main === "Clear" ||  weatherData.weather[0].main === "Sunny") {
         return img.src = "https://ssl.gstatic.com/onebox/weather/64/sunny.png";
     } else if (weatherData.weather[0].main === "Rain") {
         return img.src = "https://ssl.gstatic.com/onebox/weather/64/rain_light.png";
@@ -97,9 +97,9 @@ function filterPictures(weatherData){
         return img.src = "https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
     } else if (weatherData.weather[0].main === "Snow") {
         return img.src = "https://ssl.gstatic.com/onebox/weather/48/snow_light.png"
-    } else if (weatherData.weather[0].main === "Smoke") {
+    } else if (weatherData.weather[0].main === "Smoke" || weatherData.weather[0].main === "Fog") {
         return img.src = "https://ssl.gstatic.com/onebox/weather/64/fog.png"
-    } else if (weatherData.weather[0].main === "Mist") {
+    } else if (weatherData.weather[0].main === "Mist" || weatherData.weather[0].main === "Haze") {
         return img.src = "https://ssl.gstatic.com/onebox/weather/48/cloudy.png"
     }
 }
