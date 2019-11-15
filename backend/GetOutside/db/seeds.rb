@@ -46,12 +46,6 @@ swim = Activity.create(
     temperature: 90
 )
 
-# fourteener = Activity.create(
-#     name: "Climb a 14er", 
-#     description: "Climb a 14er", 
-#     photo: "https://res.cloudinary.com/sagacity/image/upload/c_crop,h_720,w_1080,x_0,y_0/c_limit,dpr_3.0,f_auto,fl_lossy,q_80,w_500/Capitol_Peak.2_pu63bo.jpg",
-#     temperature: 70
-# )
 
 playground = Activity.create(
     name: "Play", 
@@ -201,12 +195,12 @@ sunset = Activity.create(
     temperature: 60
 )
 
-#  = Activity.create(
-#     name: "", 
-#     description: "", 
-#     photo: "",
-#     temperature: 
-# )
+camp = Activity.create(
+    name: "Camp", 
+    description: "Go camping", 
+    photo: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs72HMcmj_9PN5reV5IKeTLgrv24gIvt4gZTHu_jmBquWPDqjy0w&s",
+    temperature: 75
+)
 
 user1 = User.create(name: "Main user")
 
