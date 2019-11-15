@@ -1,24 +1,22 @@
-# README
+   **Get Outside!**
+   
+   _No excuses_
+   ![background]([add screenshot])
+   
+   **About:** Mod2 project by Stacey and Tatiana. Use our website to plan your activities based on weather outside
+   
+   **Demo:** [add YT link]
+   
+   **Stack:** 
+   - Ruby/Rails
+   - JavaScript
+   
+   **Sources:** 
+    Activities: Google
+    Weather icons: Google
+    
+   **API** https://openweathermap.org/api
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+   **How to run**
+   1. backend: rails s
+   2. frontend: lite-server
