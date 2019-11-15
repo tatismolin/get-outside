@@ -14,14 +14,14 @@ Activity.destroy_all
 ice_skate = Activity.create(
     name: "Ice Skate", 
     description: "Go ice skating", 
-    photo: "https://www.uncovercolorado.com/wp-content/uploads/2017/11/KeystoneLakeside-Village-Christmas-Ice-Rink-1280x720.jpg",
+    photo: "https://images.rove.me/w_1920,q_85/pj3shpbmwww4eatjhwlq/banff-skating-on-lake-louise.jpg",
     temperature: 15
 )
 
 ski = Activity.create(
     name: "Ski", 
     description: "Go skiing", 
-    photo: "https://www.outsideonline.com/sites/default/files/styles/img_600x600/public/2019/10/01/john-clendenin-skiing-poles_s.jpg?itok=HVPFgcMs",
+    photo: "https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80",
     temperature: 15
 )
 
@@ -35,7 +35,7 @@ sled = Activity.create(
 hike = Activity.create(
     name: "Hike", 
     description: "Go for a hike", 
-    photo: "https://i0.wp.com/images-prod.healthline.com/hlcmsresource/images/topic_centers/2019-8/couple-hiking-mountain-climbing-1296x728-header.jpg?w=1155",
+    photo: "https://static.rootsrated.com/image/upload/s--bWT5bnGL--/t_rr_large_natural/hylybshrpqdzhenhxk0q.jpg",
     temperature: 55
 )
 
@@ -46,15 +46,15 @@ swim = Activity.create(
     temperature: 90
 )
 
-fourteener = Activity.create(
-    name: "Climb a 14er", 
-    description: "Climb a 14er", 
-    photo: "https://www.rei.com/blog/wp-content/uploads/2018/10/Quandary-2.jpg",
-    temperature: 70
-)
+# fourteener = Activity.create(
+#     name: "Climb a 14er", 
+#     description: "Climb a 14er", 
+#     photo: "https://res.cloudinary.com/sagacity/image/upload/c_crop,h_720,w_1080,x_0,y_0/c_limit,dpr_3.0,f_auto,fl_lossy,q_80,w_500/Capitol_Peak.2_pu63bo.jpg",
+#     temperature: 70
+# )
 
 playground = Activity.create(
-    name: "Play at a Playground", 
+    name: "Play", 
     description: "Play at a playground", 
     photo: "https://static.mommypoppins.com/styles/image620x420/s3/almont_13_copy.jpg",
     temperature: 75
@@ -78,7 +78,7 @@ mtb = Activity.create(
 hot_springs = Activity.create(
     name: "Hot Springs", 
     description: "Visit a hot spring", 
-    photo: "https://theknow.denverpost.com/wp-content/uploads/2018/12/7029688-1080x680.jpg",
+    photo: "https://www.choicehotels.com/cms/images/choice-hotels/demand-articles/hot-springs-tucson/hot-springs-tucson.jpg",
     temperature: 45
 )
 
@@ -86,25 +86,130 @@ ice_fishing = Activity.create(
     name: "Ice Fish", 
     description: "Go ice fishing", 
     photo: "https://www.visitlakegeorge.com/sites/default/files/styles/1600x1000/public/2018-12/ice%20fishing.jpg?itok=R1MKJAWR",
-    temperature: 10
+    temperature: 15
 )
 
 rock_climb = Activity.create(
-    name: "Rock climb", 
+    name: "Rock Climb", 
     description: "Go rock climbing", 
     photo: "https://www.colorado.com/sites/default/files/styles/1000x685/public/climbing.jpg?itok=cFTUlMVQ",
     temperature: 65
 )
 
 road_bike = Activity.create(
-    name: "Road bike", 
+    name: "Road Bike", 
     description: "Go road biking", 
     photo: "https://outsidebuzz.com/wp-content/uploads/2019/03/Best-Road-Bikes-for-Women.jpg",
     temperature: 65
 )
 
+spelunk = Activity.create(
+    name: "Spelunk", 
+    description: "Explore some caves with flashlights", 
+    photo: "https://sportsandtravel.com.sg/wp-content/uploads/2019/07/shutterstock_624056801-1024x683.jpg",
+    temperature: 55
+)
+
+cross_country_ski = Activity.create(
+    name: "Cross Country Ski", 
+    description: "Go cross country skiing", 
+    photo: "https://cottagelife.com/wp-content/uploads/2015/01/shutterstock_95551669-2-copy-e1421343860559.jpg",
+    temperature: 15
+)
+
+walk_dogs = Activity.create(
+    name: "Walk the Dogs", 
+    description: "Take the dogs for a walk", 
+    photo: "https://dailygazette.com/sites/default/files/styles/gallery_image/public/2019-05/051719_SARDogWalkers_EM-03.jpg?itok=LXr2fUcN",
+    temperature: 50
+)
+
+whitewater_raft = Activity.create(
+    name: "Whitewater Raft", 
+    description: "Go whitewater rafting", 
+    photo: "https://whitewater.net/wp-content/uploads/2016/07/3253442.jpg",
+    temperature: 80
+)
+
+jog = Activity.create(
+    name: "Jog", 
+    description: "Go for a jog", 
+    photo: "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/young-woman-jogging-through-the-fall-park-rear-shot-royalty-free-image-700592770-1538491624.jpg?crop=1xw:0.999xh;center,top&resize=480:*",
+    temperature: 60
+)
+
+meditate = Activity.create(
+    name: "Meditate", 
+    description: "Find a quiet place to meditate", 
+    photo: "https://www.newharbinger.com/sites/default/files/styles/article_image_main/public/article_assets/meditation_rd.png?itok=zuw1AQRQ",
+    temperature: 80
+)
+
+yoga = Activity.create(
+    name: "Yoga", 
+    description: "Do yoga", 
+    photo: "http://downtownsurreybia.com/wp-content/uploads/yoga-outside2.jpg",
+    temperature: 80
+)
+
+sup = Activity.create(
+    name: "SUP", 
+    description: "Stand up paddleboard", 
+    photo: "https://image.redbull.com/rbcom/052/2019-03-15/5673eda3-0c54-4ed2-aaf2-26f583b4931a/0012/0/0/4/731/1100/1500/1/thunder-lake-heli-sup.jpeg",
+    temperature: 85
+)
+
+picnic = Activity.create(
+    name: "Picnic", 
+    description: "Have a picnic at a park", 
+    photo: "http://static1.squarespace.com/static/58e7c3d9f5e231613bed29ef/599f36748fd4d22e5e45730b/5cf7debc3fb7c10001617069/1559748383737/picnic.jpeg?format=1500w",
+    temperature: 80
+)
+
+stargaze = Activity.create(
+    name: "Stargaze", 
+    description: "Go stargazing", 
+    photo: "https://www.traveldailymedia.com/assets/2019/03/Stargazing-Hilton.jpg",
+    temperature: 70
+)
+
+snowman = Activity.create(
+    name: "Snowman", 
+    description: "Build a snowman", 
+    photo: "https://www.rd.com/wp-content/uploads/2016/12/06_how_build_perfect_snowman_best_practices_decorations_tatyana_tomsickova.jpg",
+    temperature: 15
+)
+
+winter_camp = Activity.create(
+    name: "Winter camp", 
+    description: "Go winter camping", 
+    photo: "https://www.switchbacktravel.com/sites/default/files/images/articles/Winter%20camping.jpg",
+    temperature: 15
+)
+
+ice_hockey = Activity.create(
+    name: "Ice Hockey", 
+    description: "Play ice hockey", 
+    photo: "https://www.avenuecalgary.com/wp-content/uploads/2019/01/Mountains-PondHockey1.jpg",
+    temperature: 15
+)
+
+sunset = Activity.create(
+    name: "Sunrise/Sunset", 
+    description: "Watch the sun rise or set", 
+    photo: "https://cdn.pixabay.com/photo/2017/12/29/12/48/sunset-3047540_960_720.jpg",
+    temperature: 60
+)
+
+#  = Activity.create(
+#     name: "", 
+#     description: "", 
+#     photo: "",
+#     temperature: 
+# )
+
 user1 = User.create(name: "Main user")
 
 plan1 = Plan.create(user: user1)
 
-ActivityPlan.create(plan: plan1, activity: mtb)
+# ActivityPlan.create(plan: plan1, activity: mtb)
