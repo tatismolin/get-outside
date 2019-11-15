@@ -44,8 +44,11 @@ function createCard(activity){
     h1.innerText = activity.name
     img.setAttribute("src", activity.photo)
     buttonDiv.setAttribute("class", "buttonDiv")
+    // addButton.setAttribute("class", "buttons")
+    // editButton.setAttribute("class", "buttons")
+    // deleteButton.setAttribute("class", "buttons")
 
-    addButton.innerText = "ADD THIS TO YOUR PLAN"
+    addButton.innerText = "ADD TO YOUR PLAN"
     addButton.addEventListener("click", function(event){
         fetch("http://localhost:3000/activity_plans", {
             method: "POST",

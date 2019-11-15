@@ -36,11 +36,12 @@ nav {
 }
 
 nav h1 {
-    font-size: 50pt;
+    font-size: 60pt;
+    margin-top: 50px;
     margin-bottom: 55px;
-    margin-left: -10px;
-    margin-right: -30px;
-    /* font-family: 'Luckiest Guy'; */
+    margin-left: -6px;
+    margin-right: -25px;
+    text-shadow: 3px 3px  rgb(74, 119, 170);
 
 }
 
@@ -76,10 +77,12 @@ nav h1 {
 
 #weatherLocation input[type=submit] {
 	/* background: url("submit.png") no-repeat center center; */
-	width: 80px;
+	width: 90px;
 	/* height: 0;
-	border: none;
-    color: transparent; */
+	border: none; */
+    color: black;
+    font-weight: bold;
+    font-size: 11pt;
     background: rgb(74, 119, 170);
 }
 
@@ -134,6 +137,7 @@ nav h1 {
 h3 {
     padding-bottom: 7px;
     font-size: 20px;
+    margin: 0;
 }
 
 .image {
@@ -169,11 +173,6 @@ h3 {
     background: rgb(74, 119, 170);
 }
 
-
-/* h3 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-} */
 
 /* h1 {
     margin-bottom: 0px;
