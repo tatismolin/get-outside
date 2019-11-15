@@ -39,6 +39,7 @@ nav h1 {
     font-size: 50pt;
     margin-bottom: 55px;
     margin-left: -10px;
+    margin-right: -30px;
     /* font-family: 'Luckiest Guy'; */
 
 }
@@ -51,7 +52,7 @@ nav h1 {
 #logo{
     height: 200px;
     margin: 0;
-    margin-top: -25px;
+    margin-top: -28px;
 }
 
 #navLink {
@@ -223,6 +224,10 @@ a {
     padding: 8px 4px;
 }
 
+#add {
+    background: rgb(74, 119, 170);
+}
+
 .buttonDiv {
     margin-top: 10px;
     display: flex;
@@ -269,13 +274,17 @@ input[type=submit] {
 #editForm {
     padding: 20px;
     border-radius: 10px;
-    width: 50%;
+    width: 40%;
     margin: auto;
-    margin-top: 100px;
+    margin-top: 280px;
     background: rgba(255,255,255,.75);
 }
 
 #editForm h2 {
     text-align: center;
     margin: 0;
+}
+
+#edit {
+    background: rgb(74, 119, 170);
 }
