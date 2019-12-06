@@ -1,7 +1,6 @@
 body { 
     font-family: 'Montserrat', sans-serif;
     color:  rgb(15, 19, 26);
-    /* background: url(https://serving.photos.photobox.com/27381133d822c19b4199390d92eaf00e1a409d4ddeadf3cb76ab98ecc30adec415e39b56.jpg) no-repeat center center fixed;  */
     background: url(https://resi.ze-robot.com/dl/sa/san-juan-mountains-colorado-photo-credit-to-dan-carreno-1600%C3%971200.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -29,15 +28,12 @@ body, header {
 nav {
     display: flex;
     justify-content: center;
-    /* justify-content: space-around; */
-    /* background: rgba(255,255,255,.8); */
     height: 85px;
-    /* border-radius: 0px 0px 10px 10px; */
 }
 
 nav h1 {
     font-size: 60pt;
-    margin-top: 50px;
+    margin-top: 82px;
     margin-bottom: 55px;
     margin-left: -6px;
     margin-right: -25px;
@@ -53,7 +49,7 @@ nav h1 {
 #logo{
     height: 200px;
     margin: 0;
-    margin-top: -28px;
+    margin-top: 5px;
 }
 
 #navLink {
@@ -76,10 +72,7 @@ nav h1 {
 }
 
 #weatherLocation input[type=submit] {
-	/* background: url("submit.png") no-repeat center center; */
 	width: 90px;
-	/* height: 0;
-	border: none; */
     color: black;
     font-weight: bold;
     font-size: 11pt;
@@ -95,7 +88,7 @@ nav h1 {
     flex-direction: row;
     text-align: center;
     justify-content: space-evenly;
-    margin-top: 270px;
+    margin-top: 370px;
 }
 
 .weatherBoxes {
@@ -195,7 +188,7 @@ a {
     width: 1200px;
     margin: auto;
     justify-content: space-around;
-    padding-top: 220px;
+    padding-top: 350px;
 }
 
 .activity {
@@ -270,7 +263,7 @@ input[type=submit] {
     border-radius: 10px;
     width: 40%;
     margin: auto;
-    margin-top: 280px;
+    margin-top: 370px;
     background: rgba(255,255,255,.75);
 }
 
